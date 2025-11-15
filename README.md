@@ -1,11 +1,11 @@
-# 📌 Todo API – Django REST Framework
+#  Todo API – Django REST Framework
 
 A simple **Todo application** built with **Django** and **Django REST Framework**.  
 This project allows you to manage todo items with full CRUD operations.
 
 ---
 
-## 🚀 Features
+##  Features
 - Create new todo items
 - Retrieve all todo items
 - Retrieve a single todo item
@@ -14,7 +14,7 @@ This project allows you to manage todo items with full CRUD operations.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - **Python 3.10+**
 - **Django 4.x**
 - **Django REST Framework**
@@ -24,8 +24,21 @@ This project allows you to manage todo items with full CRUD operations.
 ---
 
 ## 📦 Installation & Setup
+cd D:\TodoAPI
 
-### 1️⃣ Clone the repository
-```bash
-git clone <your-repo-url>
-cd <project-folder>
+python -m venv .venv
+
+.venv\Scripts\activate
+#Linux / macOS
+# source .venv/bin/activate
+
+pip install django djangorestframework django-cors-headers
+
+# pip install -r requirements.txt
+
+python manage.py migrate
+
+python manage.py runserver
+
+# http://127.0.0.1:8000/
+
