@@ -23,7 +23,7 @@ This project allows you to manage todo items with full CRUD operations.
 
 ---
 
-## 📦 Installation & Setup
+##  Installation & Setup
 cd D:\TodoAPI
 
 python -m venv .venv
