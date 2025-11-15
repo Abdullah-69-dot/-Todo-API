@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'TodoAPI',
     #'rest_framework' added for API functionalities
     'rest_framework',
+    #3rd party apps can be added here
+    "corsheaders",
 ]
 REST_FRAMEWORK = {
 "DEFAULT_PERMISSION_CLASSES": [
@@ -48,6 +50,7 @@ REST_FRAMEWORK = {
 ],
 }
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -56,6 +59,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+CORS_ALLOWED_ORIGINS = (
+"http://localhost:3000",
+"http://localhost:8000",
+)
+CSRF_TRUSTED_ORIGINS = ["localhost:3000"]
 
 ROOT_URLCONF = 'Todo.urls'
 
